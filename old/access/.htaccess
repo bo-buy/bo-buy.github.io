@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "My Protected Area"
+AuthUserFile /homepages/11/d666590624/htdocs/Website/access/.htpasswd
+Require valid-user
