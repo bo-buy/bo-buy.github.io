@@ -1400,7 +1400,7 @@ h3 {
   }
   .theme_section {
     height: auto;
-    background-image: url('../images/MobileBackGround.png');
+    background-image: url('../images/MobileBackGround-p-800.png');
     background-position: 50% 50%;
     background-size: contain;
   }
@@ -1629,9 +1629,18 @@ h3 {
   .icon {
     color: #fff;
   }
+  .footer {
+	 text-align: center; 
+  }
 }
 
 @media (max-width: 479px) {
+	.theme_section {
+		height: auto;
+		background-image: url('../images/MobileBackGround-p-500.png');
+		background-position: 50% 50%;
+		background-size: contain;
+	}
   .div-block-4 {
     margin-top: 16px;
     margin-bottom: 16px;
@@ -1825,6 +1834,9 @@ h3 {
   .left-arrow {
     left: 0px;
     top: 0px;
+  }
+  .footer {
+	 text-align: center; 
   }
 }
 
