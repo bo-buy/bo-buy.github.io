@@ -33,10 +33,10 @@
       padding-top: 3%;
       padding-bottom: 3%;
     }
-    a:visited { text-decoration: none;}
-    a:hover {font-weight:bold;}
-    a:focus { text-decoration: none; }
-    a:hover, a:active { text-decoration: none;}
+    a.link-style:visited { text-decoration: none;}
+    a.link-style:hover {font-weight:bold;}
+    a.link-style:focus { text-decoration: none; }
+    a.link-style:hover, a:active { text-decoration: none;}
   </style>
 
 </head>
@@ -46,8 +46,8 @@
   <div data-collapse="medium" data-animation="over-right" data-duration="400" class="navbar2 w-nav"><a href="./download.html" class="sticker_download w-hidden-medium w-hidden-small w-hidden-tiny w-button">Download</a>
     <div class="container w-container"><a href="index.html" class="brand w-nav-brand"><img src="images/LogoSmall.png" srcset="images/LogoSmall-p-500.png 500w, images/LogoSmall-p-800.png 800w, images/LogoSmall-p-1080.png 1080w, images/LogoSmall.png 1110w" sizes="(max-width: 479px) 91vw, 111px" alt="" class="image-2"></a>
       <nav role="navigation" class="nav-menu w-nav-menu">
-        <a href="#how-it-works" class="nav-link-6 w-nav-link">How It Works</a>
-        <a href="./faq.html" class="nav-link-6 w-nav-link">FAQ</a><a href="contact_us.html" class="nav-link-7 w-nav-link">Contact Us</a>
+        <a href="#how-it-works" class="nav-link-6 w-nav-link link-style">How It Works</a>
+        <a href="./faq.html" class="nav-link-6 w-nav-link link-style">FAQ</a><a href="contact_us.html" class="nav-link-7 w-nav-link">Contact Us</a>
       </nav>
       <div class="w-nav-button">
         <div class="icon w-icon-nav-menu"></div>
@@ -345,8 +345,8 @@
         <div class="slide-nav w-slider-nav"></div>
       </div>
       <h2 class="heading-9">Spend less, attract more!</h2>
-      <div class="text-block-9 partner_mobile_content">Wanna join BoBuy big family?</div>
-      <div class="call_action"><a href="" class="link-2 w-button"><strong>Contact Us!</strong></a></div>
+      <div class="text-block-9 partner_mobile_content">Wanna join the BoBuy family?</div>
+      <div class="call_action"><a href="./contact_us.html" class="link-2 w-button"><strong>Contact Us!</strong></a></div>
     </div>
   </div>
   <div class="subscriber">
@@ -369,11 +369,15 @@
       <div class="row w-row">
         <div class="contact w-col w-col-3">
           <div class="footertitle"><strong>Contact Us</strong></div>
-          <div class="text-block-14">Email: info@bo-buy.com<br>‍<br>Location: 19/F. Two IFC, 8 Finance Street, Central, Hong Kong</div>
+          <div class="text-block-14"><u>Email:</u> <a href="mail-to:info@bo-buy.com" class="">info@bo-buy.com</a>‍<br><u>Location:</u> 19/F. Two IFC, 8 Finance Street, Central, Hong Kong</div>
         </div>
         <div class="company w-col w-col-2">
           <div class="footertitle"><strong>Company</strong></div>
-          <div class="text-block-15"><strong>‍</strong>FAQ<br>Career<strong>‍</strong></div>
+          <div class="text-block-15">
+            <a href="faq.html">‍FAQ</a><br>
+            <a href="contact_us.html">Contact us</a><br>
+            <a href="">‍Careers</a>
+          </div>
         </div>
         <div class="community w-col w-col-2">
           <div class="footertitle"><strong>Community</strong></div>
