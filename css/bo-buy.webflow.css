@@ -1347,6 +1347,11 @@ h3 {
   height: auto;
 }
 
+#three {
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
 @media (max-width: 991px) {
   .theme_section {
     background-image: url('../images/BackGround_4555.png');
