@@ -1840,3 +1840,102 @@ h3 {
   }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.product_showcase::-webkit-scrollbar {
+  display: none;
+}
+.gap{
+    max-height: 5px;
+}
+.div-block-7{
+  margin-bottom: 7%;
+}
+.div-block-6{
+  padding-top: 3%;
+  padding-bottom: 3%;
+}
+
+a.link-style{
+  color: black;
+  text-decoration: none;
+}
+a.link-style:visited { 
+  text-decoration: none;
+}
+a.link-style:hover { 
+  text-decoration: underline;
+}
+a.link-style:focus { 
+  text-decoration: none; 
+}
+
+a.nav-link-style {
+  text-decoration: none;
+}
+a.nav-link-style:visited {
+   text-decoration: none;
+  }
+a.nav-link-style:hover {
+   text-decoration: none; 
+   font-weight: bold;
+  }
+a.nav-link-style:focus {
+   text-decoration: none; 
+  }    
+
+.social-icons {
+   margin:0; 
+   padding:0; 
+   list-style-type:none
+  }
+.social-icons li {
+   display:inline-block !important; 
+   padding:0 5px 0 0 !important; 
+   margin:0
+  }
+.social-icons li a { 
+  background:#525252 !important; 
+  font-size:16px !important; 
+  height:24px; width:24px; 
+  text-align:center; 
+  display:block; 
+  border-radius:2px;
+  -webkit-border-radius:2px; -moz-border-radius:2px; 
+  color:#FFF !important
+}
+
+.social-icons a:visited{
+   text-decoration: none; 
+   color: black;
+  }
+.social-icons li a.facebook:hover{
+   background:#475993 !important
+  }
+.social-icons li a.facebook i{
+   margin-left:4px;
+}
+.social-icons li a.instagram:hover{ 
+  background:url(../images/instgram-bg01.jpg) no-repeat center center !important
+}
+.social-icons li a.youtube:hover{
+   background:#f61c0d !important
+  }
+
+.social-ul ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
