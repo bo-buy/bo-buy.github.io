@@ -1,0 +1,100 @@
+<?php
+if( empty( $_POST['first_name'] )){
+	echo "<script>alert('Submission failed! Something wrong with your First Name, please try again!'); window.location = './job_application';</script>";
+} elseif( empty( $_POST['last_name'] )){
+	echo "<script>alert('Submission failed! Something wrong with your Last Name, please try again!'); window.location = './job_application';</script>";
+} elseif( !isset( $_POST['job_email'] ) && empty( $_POST['job_email'] ) || !filter_var($_POST['job_email'], FILTER_VALIDATE_EMAIL) ){
+	echo "<script>alert('Submission failed! Something wrong with your Email, please try again!'); window.location = './job_application';</script><br/>";
+} elseif( empty( $_POST['phone_no'] )){
+	echo "<script>alert('Submission failed! Something wrong with your Telephone number, please try again!'); window.location = './job_application';</script>";
+} elseif( empty( $_POST['job'] )){
+	echo "<script>alert('Submission failed! Please select a job!'); window.location = './job_application';</script>";
+} elseif( $_FILES['resume_cv']['size'] == 0 && $_FILES['resume_cv']['error'] == 0 || $_FILES["resume_cv"]["type"] !== 'application/pdf'){
+	echo "<script>alert('Submission failed! Something wrong with your Resume/CV, please upload a PDF file and try again!'); window.location = './job_application';</script>";
+} elseif( $_FILES['cover_letter']['size'] == 0 && $_FILES['cover_letter']['error'] == 0 || $_FILES["cover_letter"]["type"] !== 'application/pdf'){
+	echo "<script>alert('Submission failed! Something wrong with your Cover Letter, please upload a PDF file and try again!'); window.location = './job_application';</script>";
+} else{
+	// Open Connection
+	$host_name = "localhost";
+	$database = "bobuy_live";
+	$user_name = "rbdbroot";
+	$password = "Ctu+wk9iQI9Hw50vf5pFD$l91@";
+	$connect = mysqli_connect($host_name, $user_name, $password, $database);
+
+	//connecting to sql database
+	$first_name = mysqli_real_escape_string($connect, $_POST['first_name']);
+	$last_name = mysqli_real_escape_string($connect, $_POST['last_name']);
+	$job_email = mysqli_real_escape_string($connect, $_POST['job_email']);
+	$phone_no = mysqli_real_escape_string($connect, $_POST['phone_no']);
+	$location = mysqli_real_escape_string($connect, $_POST['location']);
+	$job = mysqli_real_escape_string($connect, $_POST['job']);
+	$job_optional = mysqli_real_escape_string($connect, $_POST['job_optional']);
+	$linkedin_profile = mysqli_real_escape_string($connect, $_POST['linkedin_profile']);
+	$website = mysqli_real_escape_string($connect, $_POST['website']);
+	$how = mysqli_real_escape_string($connect, $_POST['how']);
+	mysqli_query($connect,"INSERT INTO Career (reg_date, ID, First_Name, Last_Name, Email, Phone_no, Location, Job, Job_Optional, LinkedIn, Website, Channel) VALUES (CURRENT_TIMESTAMP, NULL, '$first_name', '$last_name', '$job_email', '$phone_no', '$location', '$job', '$job_optional', '$linkedin_profile', '$website', '$how')");
+	
+	$file = $_FILES['resume_cv']['name'];
+	$file1 = $_FILES['cover_letter']['name'];
+	$remote_file = 'Files/Career/' . $_FILES["resume_cv"]["name"];
+	$ftp_server = "home666590624.1and1-data.host";
+	$ftp_user_name = "u88063792";
+	$ftp_user_pass = "Bobuy5354190@";
+	
+	/*echo $_POST['job'];
+	echo $file."<br/>";
+	echo $file1."<br/>";
+	echo $remote_file."<br/>";*/
+	// set up basic connection
+	$conn_id = ftp_connect($ftp_server);
+
+	// login with username and password
+	$login_result = ftp_login($conn_id, $ftp_user_name, $ftp_user_pass);
+
+	/*if ($_FILES["resume_cv"]["error"] > 0){
+		echo "Return Code: " . $_FILES["resume_cv"]["error"] . "<br/>";
+    } else{
+		echo "Upload: " . $_FILES["resume_cv"]["name"] . "<br/>";
+		echo "Type: " . $_FILES["resume_cv"]["type"] . "<br/>";
+		echo "Size: " . ($_FILES["resume_cv"]["size"] / 1024) . " Kb<br/>";
+		echo "Temp file: " . $_FILES["resume_cv"]["tmp_name"] . "<br/>";
+		echo "Upload: " . $_FILES["cover_letter"]["name"] . "<br/>";
+		echo "Type: " . $_FILES["cover_letter"]["type"] . "<br/>";
+		echo "Size: " . ($_FILES["cover_letter"]["size"] / 1024) . " Kb<br/>";
+		echo "Temp file: " . $_FILES["cover_letter"]["tmp_name"] . "<br/>";
+
+		if (file_exists("ftp://u88063792:Bobuy5354190@@home666590624.1and1-data.host/Files/Career/" . $_FILES["resume_cv"]["name"])){
+			echo $_FILES["resume_cv"]["name"] . " already exists. ";
+		} else{
+			echo move_uploaded_file($_FILES["resume_cv"]["tmp_name"],
+			"ftp://u88063792:Bobuy5354190@@home666590624.1and1-data.host/Files/Career/" . $_FILES["resume_cv"]["name"]) . "<br/>";
+			echo "beforeready to move";
+			move_uploaded_file($_FILES["resume_cv"]["tmp_name"],
+			"ftp://u88063792:Bobuy5354190@@home666590624.1and1-data.host/Files/Career/" . $_FILES["resume_cv"]["name"]);
+			echo "Stored in: " . "ftp://u88063792:Bobuy5354190@@home666590624.1and1-data.host/Files/Career/" . $_FILES["resume_cv"]["name"];
+		}
+    } */
+	$result = $connect->query("SELECT Max(`ID`) AS max FROM `Career` WHERE 1");
+	$row = mysqli_fetch_assoc($result);
+	$max_id = $row['max'];
+	$folder = $max_id . "_" . $first_name . "_" . $last_name;
+	if (!file_exists('ftp://u88063792:Bobuy5354190@@home666590624.1and1-data.host/Files/Career/' . $folder)) {
+		mkdir('ftp://u88063792:Bobuy5354190@@home666590624.1and1-data.host/Files/Career/' . $folder, 0777, true);
+	}
+	/*echo "ftp://u88063792:Bobuy5354190@@home666590624.1and1-data.host/Files/Career/" . $folder . "/" . $_FILES["resume_cv"]["name"];
+	echo "ftp://u88063792:Bobuy5354190@@home666590624.1and1-data.host/Files/Career/" . $folder . "/" . $_FILES["cover_letter"]["name"];*/
+	move_uploaded_file($_FILES["resume_cv"]["tmp_name"], "ftp://u88063792:Bobuy5354190@@home666590624.1and1-data.host/Files/Career/" . $folder . "/" . $folder . "_resume_cv.pdf");
+	move_uploaded_file($_FILES["cover_letter"]["tmp_name"], "ftp://u88063792:Bobuy5354190@@home666590624.1and1-data.host/Files/Career/" . $folder . "/" . $folder . "_cover_letter.pdf");
+	
+	//closing mysqli connection
+	$mysqli->close;
+	
+	$to = "shiri@bo-buy.com,youtube@bo-buy.com"; //receiver
+	$subject = "Reminder of job application"; //title
+	$msg = "Someone filed a job application, please check the application at http://bo-buy.com/access";//content
+	$headers = "From: youtube@bo-buy.com"; //sender
+	
+	mail("$to", "$subject", "$msg", "$headers");	
+	echo "<script>alert('You have submitted your application successfully, Thank you!'); window.location = '../';</script>";
+}
+?>

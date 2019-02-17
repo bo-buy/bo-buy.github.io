@@ -3,7 +3,7 @@
 <html data-wf-page="5b943a817794ecdc1875d231" data-wf-site="5b86991ee92258978c3cc2b6">
 <head>
   <meta charset="utf-8">
-  <title>Bo-Buy</title>
+  <title>BoBuy</title>
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <meta content="Webflow" name="generator">
   
@@ -33,10 +33,15 @@
       padding-top: 3%;
       padding-bottom: 3%;
     }
+    a.link-style { color: black; text-decoration: none;}
     a.link-style:visited { text-decoration: none;}
-    a.link-style:hover {font-weight:bold;}
+    a.link-style:hover { text-decoration: underline;}
     a.link-style:focus { text-decoration: none; }
-    a.link-style:hover, a:active { text-decoration: none;}
+
+    a.nav-link-style {text-decoration: none;}
+    a.nav-link-style:visited { text-decoration: none;}
+    a.nav-link-style:hover { text-decoration: none; font-weight: bold;}
+    a.nav-link-style:focus { text-decoration: none; }    
   </style>
 
 </head>
@@ -44,10 +49,11 @@
 <body class="body">
   
   <div data-collapse="medium" data-animation="over-right" data-duration="400" class="navbar2 w-nav"><a href="./download.html" class="sticker_download w-hidden-medium w-hidden-small w-hidden-tiny w-button">Download</a>
-    <div class="container w-container"><a href="index.html" class="brand w-nav-brand"><img src="images/LogoSmall.png" srcset="images/LogoSmall-p-500.png 500w, images/LogoSmall-p-800.png 800w, images/LogoSmall-p-1080.png 1080w, images/LogoSmall.png 1110w" sizes="(max-width: 479px) 91vw, 111px" alt="" class="image-2"></a>
+    <div class="container w-container"><a href="#top" class="brand w-nav-brand"><img src="images/LogoSmall.png" srcset="images/LogoSmall-p-500.png 500w, images/LogoSmall-p-800.png 800w, images/LogoSmall-p-1080.png 1080w, images/LogoSmall.png 1110w" sizes="(max-width: 479px) 91vw, 111px" alt="" class="image-2"></a>
       <nav role="navigation" class="nav-menu w-nav-menu">
-        <a href="#how-it-works" class="nav-link-6 w-nav-link link-style">How It Works</a>
-        <a href="./faq.html" class="nav-link-6 w-nav-link link-style">FAQ</a><a href="contact_us.html" class="nav-link-7 w-nav-link">Contact Us</a>
+        <a href="#how-it-works" class="nav-link-6 w-nav-link nav-link-style">How It Works</a>
+        <a href="./faq.html" class="nav-link-6 w-nav-link nav-link-style">FAQ</a>
+        <a href="contact_us.html" class="nav-link-7 w-nav-link nav-link-style">Contact Us</a>
       </nav>
       <div class="w-nav-button">
         <div class="icon w-icon-nav-menu"></div>
@@ -369,19 +375,25 @@
       <div class="row w-row">
         <div class="contact w-col w-col-3">
           <div class="footertitle"><strong>Contact Us</strong></div>
-          <div class="text-block-14"><u>Email:</u> <a href="mail-to:info@bo-buy.com" class="">info@bo-buy.com</a>‍<br><u>Location:</u> 19/F. Two IFC, 8 Finance Street, Central, Hong Kong</div>
+          <div class="text-block-14">
+            Email: <a href="mailto:info@bo-buy.com" class="link-style">info@bo-buy.com</a>‍<br>
+            Location: <a href="https://www.google.com/maps/place/BoBuy/@22.285232,114.1570713,17z/data=!3m1!4b1!4m5!3m4!1s0x34040063ac155d57:0x1fa09c0e1b69f305!8m2!3d22.285232!4d114.15926" class="link-style">19/F. Two IFC, 8 Finance Street, Central, Hong Kong</a>
+          </div>
         </div>
         <div class="company w-col w-col-2">
           <div class="footertitle"><strong>Company</strong></div>
           <div class="text-block-15">
-            <a href="faq.html">‍FAQ</a><br>
-            <a href="contact_us.html">Contact us</a><br>
-            <a href="">‍Careers</a>
+            <a href="faq.html" class="link-style">‍FAQ</a><br>
+            <a href="contact_us.html" class="link-style">Contact us</a><br>
+            <a href="/careers/" class="link-style">‍Careers</a>
           </div>
         </div>
         <div class="community w-col w-col-2">
           <div class="footertitle"><strong>Community</strong></div>
-          <div class="text-block-6">Blog<strong>‍</strong></div><img src="images/facebook-brands.svg" width="24" height="24" alt=""><img src="images/facebook-brands.svg" width="24" height="24" alt=""><img src="images/facebook-brands.svg" width="24" height="24" alt="">
+          <div class="text-block-6"><a href="/blog/" class="link-style">Blog</a></div>
+          <img src="images/facebook-brands.svg" width="24" height="24" alt="">
+          <img src="images/facebook-brands.svg" width="24" height="24" alt="">
+          <img src="images/facebook-brands.svg" width="24" height="24" alt="">
           <div class="w-embed"><i class="fab fa-instagram"></i></div>
         </div>
         <div class="column-3 w-col w-col-2">
