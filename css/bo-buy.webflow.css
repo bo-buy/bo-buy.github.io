@@ -1937,7 +1937,10 @@ a.nav-link-style:focus {
 }
 .social-icons li a.youtube:hover{
    background:#f61c0d !important
-  }
+}
+.social-icons li a.linkedin:hover{
+  background: #0077B5 !important
+}
 
 .social-ul ul {
   margin: 0;
