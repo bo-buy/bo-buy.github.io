@@ -1392,6 +1392,10 @@ h3 {
 	margin-right: 5%;
 }
 
+.mobile_steps {
+	display: none;
+}
+
 @media (max-width: 991px) {
   .theme_section {
     background-image: url('../images/BackGround_4555.png');
@@ -1404,6 +1408,7 @@ h3 {
     background-image: -webkit-linear-gradient(270deg, rgba(42, 42, 42, .49), rgba(42, 42, 42, .49)), -webkit-linear-gradient(270deg, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5));
     background-image: linear-gradient(180deg, rgba(42, 42, 42, .49)0, rgba(42, 42, 42, .49)), linear-gradient(180deg, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5));
   }
+  
   .div-block-6 {
     width: 45%;
     -webkit-box-align: stretch;
@@ -1435,6 +1440,9 @@ h3 {
     margin-bottom: 0px;
     font-size: 36px;
   }
+  .mobile_steps {
+	display: none;
+	}
 }
 
 @media (max-width: 767px) {
@@ -1677,6 +1685,9 @@ h3 {
   .footer {
 	 text-align: center; 
   }
+  .mobile_steps {
+	display: none;
+	}
 }
 
 @media (max-width: 479px) {
@@ -1690,6 +1701,12 @@ h3 {
     margin-top: 16px;
     margin-bottom: 16px;
   }
+  .mobile_steps {
+	display: block;
+	}
+	.default_steps {
+	display: none;	
+	}
   .image-4 {
     margin-bottom: 8px;
   }
@@ -1839,25 +1856,6 @@ h3 {
   .icon {
     color: #fff;
   }
-  .div-block-27 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-  }
   .image-20 {
     height: 100%;
   }
@@ -1883,6 +1881,32 @@ h3 {
   .footer {
 	 text-align: center; 
   }
+  .dropdown {
+	  float: left;
+	  width: 100%;
+  }
+  .dropContent {
+	  float: left;
+  }
+  /* Dropdown Content (Hidden by Default) */
+.dropContent {
+    background-color: transparent;
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
+    z-index: 0;
+}
+
+/* Links inside the dropdown */
+.dropContent a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropContent a:hover {
+    color: white;
+	font-weight: bold;
+}
 }
 
 
