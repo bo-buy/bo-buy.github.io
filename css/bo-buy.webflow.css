@@ -1396,6 +1396,44 @@ h3 {
 	display: none;
 }
 
+.feed-container {
+	margin: 0 auto;
+	margin-top: 5%;
+	background-color: #ffc000;
+	width: 75%;
+	border-radius: 30px;
+	padding-top: 5px;
+	box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, .2);
+}
+
+.feed-container h1 {
+	text-align: center;
+}
+
+.post-container, .post-description {
+	display: block;
+	background-color: white;
+	width: 90%;
+	margin: 0 auto;
+	padding: 10px 30px;
+	border-radius: 30px;	
+	border: 1px solid black;
+}
+
+.post-container p {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.post-link {
+	color: black;
+}
+
+.post-description p {
+	font-size: 15px;
+}
+
 @media (max-width: 991px) {
   .theme_section {
     background-image: url('../images/BackGround_4555.png');
