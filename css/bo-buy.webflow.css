@@ -1434,6 +1434,12 @@ h3 {
 	font-size: 15px;
 }
 
+@media (min-width: 2000px) {
+	body {
+		font-size: 20px;
+	}
+}
+
 @media (max-width: 991px) {
   .theme_section {
     background-image: url('../images/BackGround_4555.png');
