@@ -19,8 +19,8 @@ h3 {
 
 .section {
     height: 64px;
-    background-image: -webkit-linear-gradient(270deg,rgba(42,42,42,.49),rgba(42,42,42,.49)),url(../images/example-bg.png),-webkit-linear-gradient(270deg,#000,#fff);
-    background-image: linear-gradient(180deg,rgba(42,42,42,.49),rgba(42,42,42,.49)),url(../images/example-bg.png),linear-gradient(180deg,#000,#fff);
+    background-image: -webkit-linear-gradient(270deg,rgba(42,42,42,.49),rgba(42,42,42,.49));
+    background-image: linear-gradient(180deg,rgba(42,42,42,.49),rgba(42,42,42,.49));
     background-position: 0 0,0 0,0 0;
     background-size: auto,125px,auto;
     line-height: 64px
