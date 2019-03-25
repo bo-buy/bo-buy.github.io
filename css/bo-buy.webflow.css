@@ -19,8 +19,8 @@ h3 {
 
 .section {
     height: 64px;
-    background-image: -webkit-linear-gradient(270deg,rgba(42,42,42,.49),rgba(42,42,42,.49)),url(../images/example-bg.png),-webkit-linear-gradient(270deg,#000,#fff);
-    background-image: linear-gradient(180deg,rgba(42,42,42,.49),rgba(42,42,42,.49)),url(../images/example-bg.png),linear-gradient(180deg,#000,#fff);
+    background-image: -webkit-linear-gradient(270deg,rgba(42,42,42,.49),rgba(42,42,42,.49));
+    background-image: linear-gradient(180deg,rgba(42,42,42,.49),rgba(42,42,42,.49));
     background-position: 0 0,0 0,0 0;
     background-size: auto,125px,auto;
     line-height: 64px
@@ -374,7 +374,6 @@ h3 {
     bottom: -2px;
     height: 458px;
     margin-bottom: 0;
-    background-image: url(../images/example-bg.png);
     background-position: 50% 50%;
     background-size: cover;
     background-attachment: scroll
@@ -512,6 +511,10 @@ h3 {
 .submit-button,.text-field {
     height: 60px;
     margin-bottom: 0
+}
+
+.w-input {
+    border: 0
 }
 
 .form-block {
@@ -750,31 +753,56 @@ h3 {
     margin-bottom: 90px
 }
 
-.activities,.book_checkout,.div-block-15,.dynamic_pricing {
+.activities,.book_checkout {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
     -webkit-box-align: center;
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center
 }
 
-.activities,.book_checkout,.dynamic_pricing {
+.div-block-15 {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center
+}
+
+.div-block-15,.dynamic_pricing {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+.activities {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
-    flex-direction: column;
+    flex-direction: column
+}
+
+.book_checkout {
     -webkit-box-pack: start;
     -webkit-justify-content: flex-start;
     -ms-flex-pack: start;
     justify-content: flex-start
+}
+
+.book_checkout,.dynamic_pricing {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column
 }
 
 .activities,.dynamic_pricing {
@@ -1004,11 +1032,14 @@ h3 {
 
 .heading-10,.heading-7,.heading-8,.heading-9 {
     margin-top: 48px;
-    margin-bottom: 48px;
     text-align: center
 }
 
-.heading-10,.heading-9 {
+.heading-7,.heading-8,.heading-9 {
+    margin-bottom: 48px
+}
+
+.heading-9 {
     margin-bottom: 36px
 }
 
@@ -1226,6 +1257,10 @@ h3 {
 
 .post-description p {
     font-size: 15px
+}
+
+.hide {
+    display: none
 }
 
 @media (min-width:2000px) {
@@ -1500,12 +1535,14 @@ h3 {
     }
 
     .heading-8 {
-        margin-top: 36px;
         margin-bottom: 36px
     }
 
-    .heading-10,.heading-9 {
-        margin-top: 36px;
+    .heading-10,.heading-8,.heading-9 {
+        margin-top: 36px
+    }
+
+    .heading-9 {
         font-size: 14px
     }
 
