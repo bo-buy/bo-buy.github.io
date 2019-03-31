@@ -6,7 +6,6 @@ It contains the <head> code, which has all of the links to the assets we use.
 It also contains the navbar, including its additional mobile responsive functionality.
 
 Include the contents of this whole entire file in every webpage.
-
 -->
 
 <!DOCTYPE html>
@@ -40,17 +39,14 @@ Include the contents of this whole entire file in every webpage.
       
       ga('create', 'UA-99902633-1', 'auto');
       ga('send', 'pageview');
-
       var trackOutboundLink = function (url, isExternal) {
           var params = {};
-
           if (!isExternal) {
               params.hitCallback = function () {
                   document.location = url;
               }
           }
           ga('send', 'event', 'outbound', 'click', url, params);
-
           return isExternal;
       }
   </script>
@@ -72,6 +68,7 @@ Include the contents of this whole entire file in every webpage.
         <div class="container w-container"><a href="index.html" class="brand w-nav-brand"><img src="images/LogoSmall.png" srcset="images/LogoSmall-p-500.png 500w, images/LogoSmall-p-800.png 800w, images/LogoSmall-p-1080.png 1080w, images/LogoSmall.png 1110w" sizes="(max-width: 479px) 91vw, 111px" alt="BoBuy Logo" title="BoBuy" class="image-2"></a>
             <nav role="navigation" class="nav-menu w-nav-menu">
             <a href="index.html#how-it-works" class="nav-link-6 w-nav-link nav-link-style">How It Works</a>
+            <a href="about_us.html" class="nav-link-6 w-nav-link nav-link-style">About Us</a>
             <a href="faq.html" class="nav-link-6 w-nav-link nav-link-style">FAQ</a>
             <a href="contact_us.html" class="nav-link-7 w-nav-link nav-link-style">Contact Us</a>
             <div class="dropdown">
@@ -89,4 +86,3 @@ Include the contents of this whole entire file in every webpage.
     </div>
 
   <a href="./download.html" class="button-2 button_mobile w-button"><strong class="bold-text-2">Download Now!</strong></a>
-  
