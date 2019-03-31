@@ -1263,6 +1263,11 @@ h3 {
     display: none
 }
 
+.typeform-container{
+    margin-left: 20vw;
+    margin-top: 5%;
+}
+
 @media (min-width:2000px) {
     body {
         font-size: 20px
