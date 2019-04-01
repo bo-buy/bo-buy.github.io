@@ -860,13 +860,13 @@ h3 {
     background-image: linear-gradient(180deg,#ffc000,#ffc000)
 }
 
-.button.beauty-spa-button,.button.wellness-button {
+.button.beauty-spa-button,.button.wellness-button,.button.automotive-button,.button.game-button,.button.petsspa-button {
     display: none;
     background-color: #ffc000;
     background-image: none
 }
 
-.button.wellness-button-off:active,.button.wellness-button:active {
+.button.wellness-button-off:active,.button.wellness-button:active, .button.automotive-button-off:active,.button.automotive-button:active {
     background-image: -webkit-linear-gradient(270deg,transparent,transparent);
     background-image: linear-gradient(180deg,transparent,transparent)
 }
@@ -874,12 +874,6 @@ h3 {
 .button.game {
     background-image: -webkit-linear-gradient(270deg,#ffc000,#ffc000);
     background-image: linear-gradient(180deg,#ffc000,#ffc000)
-}
-
-.button.automotive-button,.button.game-button,.button.petsspa-button {
-    display: none;
-    background-color: #ffc000;
-    background-image: none
 }
 
 .button.fitness-button-off {
@@ -938,7 +932,7 @@ h3 {
     display: block
 }
 
-.products.beauty-spa,.products.game,.products.wellness {
+.products.beauty-spa,.products.game,.products.wellness, .products.automotive, .products.petsspa {
     display: none
 }
 
@@ -1817,7 +1811,7 @@ h3 {
         margin-left: 10px;
         text-align: center
     }
-
+	
     .div-block-28 {
         height: 300px;
         margin-bottom: 16px;
