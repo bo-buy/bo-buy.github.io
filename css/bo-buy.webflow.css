@@ -664,11 +664,11 @@ h3 {
 }
 
 .div-block-14 {
-	width: 48px;
-	height: 6px;
+    width: 48px;
+    height: 6px;
     margin-bottom: 8px;
     background-image: -webkit-linear-gradient(270deg,#ffc000,#ffc000);
-    background-image: linear-gradient(180deg,#ffc000,#ffc000);
+    background-image: linear-gradient(180deg,#ffc000,#ffc000)
 }
 
 .div-block-14.highlight1 {
@@ -686,17 +686,17 @@ h3 {
 }
 
 .step {
-    margin-bottom: 48px;
+    margin-bottom: 48px
 }
 
 .step-style {
-	font-weight: bold;
-	box-shadow: 1px 1px 10px 0 rgba(0,0,0,.5);
-	border-radius: 10px;
-	margin-bottom: 5px;
-	line-height: 30px;
-	background-color: #e9e9e9;
-	padding: 5px
+    font-weight: 700;
+    box-shadow: 1px 1px 10px 0 rgba(0,0,0,.5);
+    border-radius: 10px;
+    margin-bottom: 5px;
+    line-height: 30px;
+    background-color: #e9e9e9;
+    padding: 5px
 }
 
 .image-11 {
@@ -870,13 +870,13 @@ h3 {
     background-image: linear-gradient(180deg,#ffc000,#ffc000)
 }
 
-.button.beauty-spa-button,.button.wellness-button,.button.automotive-button,.button.game-button,.button.petsspa-button {
+.button.automotive-button,.button.beauty-spa-button,.button.game-button,.button.petsspa-button,.button.wellness-button {
     display: none;
     background-color: #ffc000;
     background-image: none
 }
 
-.button.wellness-button-off:active,.button.wellness-button:active, .button.automotive-button-off:active,.button.automotive-button:active {
+.button.automotive-button-off:active,.button.automotive-button:active,.button.wellness-button-off:active,.button.wellness-button:active {
     background-image: -webkit-linear-gradient(270deg,transparent,transparent);
     background-image: linear-gradient(180deg,transparent,transparent)
 }
@@ -942,7 +942,7 @@ h3 {
     display: block
 }
 
-.products.beauty-spa,.products.game,.products.wellness, .products.automotive, .products.petsspa {
+.products.automotive,.products.beauty-spa,.products.game,.products.petsspa,.products.wellness {
     display: none
 }
 
@@ -1267,9 +1267,9 @@ h3 {
     display: none
 }
 
-.typeform-container{
+.typeform-container {
     margin-left: 20vw;
-    margin-top: 5%;
+    margin-top: 5%
 }
 
 @media (min-width:2000px) {
@@ -1821,7 +1821,7 @@ h3 {
         margin-left: 10px;
         text-align: center
     }
-	
+
     .div-block-28 {
         height: 300px;
         margin-bottom: 16px;
