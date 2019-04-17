@@ -628,6 +628,16 @@
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" type="text/javascript" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous" defer></script>
   <script src="./js/webflow.js" type="text/javascript" defer></script>
   
+  <script>
+		function init() {
+			var imgDefer = document.getElementsByTagName('img');
+			for (var i=0; i<imgDefer.length; i++) {
+				if(imgDefer[i].getAttribute('data-src')) {
+					imgDefer[i].setAttribute('src',imgDefer[i].getAttribute('data-src'));
+		} } }
+		window.onload = init;
+	</script>
+  
   <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
   <style>
     .product_showcase::-webkit-scrollbar { 
