@@ -1,18 +1,18 @@
 <?php
 if( empty( $_POST['first_name'] )){
-	echo "<script>alert('Submission failed! Something wrong with your First Name, please try again!'); window.location = './job_application';</script>";
+	echo "<script>alert('提交失敗！ 您輸入的名字有誤，請修改後再試一次！'); window.location = './job_application';</script>";
 } elseif( empty( $_POST['last_name'] )){
-	echo "<script>alert('Submission failed! Something wrong with your Last Name, please try again!'); window.location = './job_application';</script>";
+	echo "<script>alert('提交失敗！ 您輸入的姓名有誤，請修改後再試一次！'); window.location = './job_application';</script>";
 } elseif( !isset( $_POST['job_email'] ) && empty( $_POST['job_email'] ) || !filter_var($_POST['job_email'], FILTER_VALIDATE_EMAIL) ){
-	echo "<script>alert('Submission failed! Something wrong with your Email, please try again!'); window.location = './job_application';</script><br/>";
+	echo "<script>alert('提交失敗！ 您輸入的郵箱有誤，請修改後再試一次！'); window.location = './job_application';</script><br/>";
 } elseif( empty( $_POST['phone_no'] )){
-	echo "<script>alert('Submission failed! Something wrong with your Telephone number, please try again!'); window.location = './job_application';</script>";
+	echo "<script>alert('提交失敗！ 您輸入的電話號碼有誤，請修改後再試一次！'); window.location = './job_application';</script>";
 } elseif( empty( $_POST['job'] )){
-	echo "<script>alert('Submission failed! Please select a job!'); window.location = './job_application';</script>";
+	echo "<script>alert('提交失敗！ 請選擇你申請的工作。'); window.location = './job_application';</script>";
 } elseif( $_FILES['resume_cv']['size'] == 0 && $_FILES['resume_cv']['error'] == 0 || $_FILES["resume_cv"]["type"] !== 'application/pdf'){
-	echo "<script>alert('Submission failed! Something wrong with your Resume/CV, please upload a PDF file and try again!'); window.location = './job_application';</script>";
+	echo "<script>alert('提交失敗！ 您提交的簡歷有誤，請提交pdf格式的文件後再試一次！'); window.location = './job_application';</script>";
 } elseif( $_FILES['cover_letter']['size'] == 0 && $_FILES['cover_letter']['error'] == 0 || $_FILES["cover_letter"]["type"] !== 'application/pdf'){
-	echo "<script>alert('Submission failed! Something wrong with your Cover Letter, please upload a PDF file and try again!'); window.location = './job_application';</script>";
+	echo "<script>alert('提交失敗！ 您提交的求職信有誤，請修改後再試一次！'); window.location = './job_application';</script>";
 } else{
 	// Open Connection
 	$host_name = "localhost";
@@ -95,6 +95,6 @@ if( empty( $_POST['first_name'] )){
 	$headers = "From: youtube@bo-buy.com"; //sender
 	
 	mail("$to", "$subject", "$msg", "$headers");	
-	echo "<script>alert('You have submitted your application successfully, Thank you!'); window.location = '../';</script>";
+	echo "<script>alert('您已成功提交申請，謝謝！'); window.location = '../';</script>";
 }
 ?>
