@@ -31,10 +31,10 @@ Include the contents of this whole entire file in every webpage.
               <div class="text-block-6"><a href="blog/index.html" class="link-style">Blog</a></div>
               <ul class="social-icons">
                 <li><a href="https://www.facebook.com/BoBuyapp/?ref=page_internal" title="Facebook" target="_blank" class="facebook" onclick="return trackOutboundLink('https://www.facebook.com/BoBuyapp/?ref=page_internal', true); return false;"><i class="fab fa-facebook-f" aria-hidden="true"></i><span class="hide">hide</span></a></li>
-        <li><a href="https://www.instagram.com/bobuyhkg" title="Instagram" class="instagram" target="_blank" onclick="return trackOutboundLink('https://www.instagram.com/bobuyhkg', true); return false;"><i class="fab fa-instagram" aria-hidden="true"></i><span class="hide">hide</span></a></li>
-        <br>
-        <li><a style="margin-top:5px" href="https://www.youtube.com/channel/UCM-pUwp0IMMXcDh4BElTCcg" title="Youtube" class="youtube" target="_blank" onclick="return trackOutboundLink('https://www.youtube.com/channel/UCM-pUwp0IMMXcDh4BElTCcg', true); return false;"><i class="fab fa-youtube" aria-hidden="true"></i><span class="hide">hide</span></a></li>
-        <li><a style="margin-top:5px" href="https://www.linkedin.com/company/bobuy/" title="LinkedIn" class="linkedin" target="_blank" onclick="return trackOutboundLink('https://www.linkedin.com/company/bobuy/', true); return false;"><i class="fab fa-linkedin-in" aria-hidden="true"></i><span class="hide">hide</span></a></li>
+				<li><a href="https://www.instagram.com/bobuyhkg" title="Instagram" class="instagram" target="_blank" onclick="return trackOutboundLink('https://www.instagram.com/bobuyhkg', true); return false;"><i class="fab fa-instagram" aria-hidden="true"></i><span class="hide">hide</span></a></li>
+				<br>
+				<li><a style="margin-top:5px" href="https://www.youtube.com/channel/UCM-pUwp0IMMXcDh4BElTCcg" title="Youtube" class="youtube" target="_blank" onclick="return trackOutboundLink('https://www.youtube.com/channel/UCM-pUwp0IMMXcDh4BElTCcg', true); return false;"><i class="fab fa-youtube" aria-hidden="true"></i><span class="hide">hide</span></a></li>
+				<li><a style="margin-top:5px" href="https://www.linkedin.com/company/bobuy/" title="LinkedIn" class="linkedin" target="_blank" onclick="return trackOutboundLink('https://www.linkedin.com/company/bobuy/', true); return false;"><i class="fab fa-linkedin-in" aria-hidden="true"></i><span class="hide">hide</span></a></li>
               </ul>
             </div>
             <div class="column-3 w-col w-col-2">
@@ -55,6 +55,16 @@ Include the contents of this whole entire file in every webpage.
     
       <script src="https://code.jquery.com/jquery-3.3.1.min.js" type="text/javascript" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous" defer></script>
       <script src="./js/webflow.js" type="text/javascript" defer></script>
+	
+	<script>
+		function init() {
+			var imgDefer = document.getElementsByTagName('img');
+			for (var i=0; i<imgDefer.length; i++) {
+				if(imgDefer[i].getAttribute('data-src')) {
+					imgDefer[i].setAttribute('src',imgDefer[i].getAttribute('data-src'));
+		} } }
+		window.onload = init;
+	</script>
       
       <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
       <style>
