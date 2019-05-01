@@ -1,3 +1,4 @@
+@charset "UTF-8";
 h1,h2,h3 {
     margin-top: 20px;
     margin-bottom: 10px;
@@ -2164,4 +2165,4 @@ a.nav-link-style:focus {
 
 .social-icons li a.linkedin:hover {
     background: #0077b5!important
-}}
+}
