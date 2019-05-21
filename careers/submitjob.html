@@ -1,18 +1,18 @@
 <?php
 if( empty( $_POST['first_name'] )){
-	echo "<script>alert('Submission failed! Something wrong with your First Name, please try again!'); window.location = './job_application';</script>";
+	echo "<script>alert('Submission failed! There is something wrong with your First Name. Please try again!'); window.location = './job_application';</script>";
 } elseif( empty( $_POST['last_name'] )){
-	echo "<script>alert('Submission failed! Something wrong with your Last Name, please try again!'); window.location = './job_application';</script>";
+	echo "<script>alert('Submission failed! There is something wrong with your Last Name. Please try again!'); window.location = './job_application';</script>";
 } elseif( !isset( $_POST['job_email'] ) && empty( $_POST['job_email'] ) || !filter_var($_POST['job_email'], FILTER_VALIDATE_EMAIL) ){
-	echo "<script>alert('Submission failed! Something wrong with your Email, please try again!'); window.location = './job_application';</script><br/>";
+	echo "<script>alert('Submission failed! There is something wrong with your Email. Please try again!'); window.location = './job_application';</script><br/>";
 } elseif( empty( $_POST['phone_no'] )){
-	echo "<script>alert('Submission failed! Something wrong with your Telephone number, please try again!'); window.location = './job_application';</script>";
+	echo "<script>alert('Submission failed! There is something wrong with your Telephone number. Please try again!'); window.location = './job_application';</script>";
 } elseif( empty( $_POST['job'] )){
 	echo "<script>alert('Submission failed! Please select a job!'); window.location = './job_application';</script>";
 } elseif( $_FILES['resume_cv']['size'] == 0 && $_FILES['resume_cv']['error'] == 0 || $_FILES["resume_cv"]["type"] !== 'application/pdf'){
-	echo "<script>alert('Submission failed! Something wrong with your Resume/CV, please upload a PDF file and try again!'); window.location = './job_application';</script>";
+	echo "<script>alert('Submission failed! There is something wrong with your Resume/CV. Please upload a PDF file and try again!'); window.location = './job_application';</script>";
 } elseif( $_FILES['cover_letter']['size'] == 0 && $_FILES['cover_letter']['error'] == 0 || $_FILES["cover_letter"]["type"] !== 'application/pdf'){
-	echo "<script>alert('Submission failed! Something wrong with your Cover Letter, please upload a PDF file and try again!'); window.location = './job_application';</script>";
+	echo "<script>alert('Submission failed! There is something wrong with your Cover Letter. Please upload a PDF file and try again!'); window.location = './job_application';</script>";
 } else{
 	// Open Connection
 	$host_name = "localhost";
@@ -90,11 +90,11 @@ if( empty( $_POST['first_name'] )){
 	$mysqli->close;
 	
 	$to = "shiri@bo-buy.com,youtube@bo-buy.com"; //receiver
-	$subject = "Reminder of job application"; //title
-	$msg = "Someone filed a job application, please check the application at http://bo-buy.com/access";//content
+	$subject = "Reminder of Job Application"; //title
+	$msg = "Someone filed a job application. Please check the application at http://bo-buy.com/access";//content
 	$headers = "From: youtube@bo-buy.com"; //sender
 	
 	mail("$to", "$subject", "$msg", "$headers");	
-	echo "<script>alert('You have submitted your application successfully, Thank you!'); window.location = '../';</script>";
+	echo "<script>alert('You have successfully submitted your application. Thank you!'); window.location = '../';</script>";
 }
 ?>
